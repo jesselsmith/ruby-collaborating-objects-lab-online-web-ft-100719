@@ -14,7 +14,7 @@ class Artist
   def self.all
     @@all
   end
-
+  
   def songs
     Song.all.select{|song| song.artist == self}
   end
@@ -26,5 +26,14 @@ class Artist
   def add_song_by_name(song_name)
     new_song = Song.new(song_name)
     add_song(new_song)
+  end
+
+  def self.find_or_create_by_name(artist_name)
+    artist_exists = self.all.find{|artist| artist.name == artist_name}
+    if artist_exists
+      artist_exists
+    else
+      Artist.new(artist_name)
+    end
   end
 end
