@@ -7,5 +7,5 @@ class MP3Importer
 
   def import
     Dir["#{path}/**/*.mp3]
-    
+
 end
