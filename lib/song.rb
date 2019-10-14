@@ -19,6 +19,7 @@ class Song
     new_song = Song.new(file_data[1])
     new_song.artist = file_data[0]
     new_song.genre = file_data[2]
+    new_song
   end
 
 
