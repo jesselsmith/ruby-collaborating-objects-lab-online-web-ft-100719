@@ -14,7 +14,7 @@ class Song
     @@all
   end
 
-  def new_by_filename(filename)
+  def self.new_by_filename(filename)
     file_data = filename.split(/ - |.mp3/)
     new_song = Song.new(file_data[1])
     artist_name = file_data[0]
