@@ -19,6 +19,4 @@ end
 
 test_music_path = "./spec/fixtures/mp3s"
 music_importer = MP3Importer.new(test_music_path)
-
-expect(Song).to receive(:new_by_filename).at_least(4).times
 puts music_importer.import
