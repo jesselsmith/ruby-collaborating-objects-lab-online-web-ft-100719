@@ -12,6 +12,6 @@ class MP3Importer
 
   def files
     new_files = Dir["#{path}/**/*.mp3"]
-    new_files.split("/").last
+    new_files.map{|filename| filename.split("/").last}
   end
 end
