@@ -11,6 +11,7 @@ class MP3Importer
   end
 
   def files
-    Dir["#{path}/**/*.mp3"]
+    new_files = Dir["#{path}/**/*.mp3"]
+    new_files.split("/")
   end
 end
