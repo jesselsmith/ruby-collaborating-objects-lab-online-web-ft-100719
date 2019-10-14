@@ -23,6 +23,6 @@ test_music_path = "./spec/fixtures/mp3s"
 music_importer = MP3Importer.new(test_music_path)
 puts music_importer.import
 Artist.all.each do|artist|
-  puts artist.name + "'s songs: "
+  puts artist.name + "'s songs:"
   artist.print_songs
 end
