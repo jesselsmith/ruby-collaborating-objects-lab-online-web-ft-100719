@@ -6,10 +6,11 @@ class MP3Importer
   end
 
   def import
-    song_filenames = Dir["#{path}/**/*.mp3"]
+    song_filenames = self.files
     song_filenames.each{|filename| Song.new_by_filename(filename)}
   end
 
   def files
+    Dir["#{path}/**/*.mp3"]
   end
 end
