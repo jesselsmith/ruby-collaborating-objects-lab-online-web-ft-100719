@@ -1,5 +1,5 @@
-require 'song'
-require 'artist'
+require_relative 'song'
+require_relative 'artist'
 class MP3Importer
   attr_accessor :path
 
